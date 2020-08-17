@@ -1,0 +1,190 @@
+{
+  "questions":{
+      "page1": {
+        "ques1":{
+          "ques": "1. Which SQL function is used to count the number of rows in a SQL query?",
+          "optoin1": "COUNT()",
+          "optoin2": "NUMBER()",
+          "optoin3": "SUM()",
+          "optoin4": "COUNT(*)"
+        },
+        "ques2":{
+          "ques": "2. Which SQL keyword is used to retrieve a maximum value?",
+          "optoin1": "MOST",
+          "optoin2": "TOP",
+          "optoin3": "MAX",
+          "optoin4": "UPPER"
+        },
+        "ques3":{
+          "ques": "3.  Which of the following SQL clauses is used to DELETE tuples from a database table?",
+          "optoin1": "DELETE",
+          "optoin2": "REMOVE",
+          "optoin3": "DROP",
+          "optoin4": "CLEAR"
+        },
+        "ques4":{
+          "ques": "4.  ___________removes all rows from a table without logging the individual row deletions.",
+          "optoin1": "DELETE",
+          "optoin2": "REMOVE",
+          "optoin3": "DROP",
+          "optoin4": "TRUNCATE"
+        },
+        "ques5":{
+          "ques": "5. Which of the following is not a DDL command?",
+          "optoin1": "UPDATE",
+          "optoin2": "TRUNCATE",
+          "optoin3": "ALTER",
+          "optoin4": "None of the Mentioned"
+        }
+      },
+  
+      "page2": {
+        "ques1":{
+          "ques": "6. Which of the following are TCL commands?",
+          "optoin1": "UPDATE and TRUNCATE",
+          "optoin2": "SELECT and INSERT",
+          "optoin3": "GRANT and REVOKE",
+          "optoin4": "ROLLBACK and SAVEPOINT   "
+        },
+        "ques2":{
+          "ques": " 7. ________________ is not a category of SQL command.",
+          "optoin1": "TCL",
+          "optoin2": "SCL",
+          "optoin3": "DCL",
+          "optoin4": "DDL"
+        },
+        "ques3":{
+          "ques": "8. If you don’t specify ASC or DESC after a SQL ORDER BY clause, the following is used by default ______________",
+          "optoin1": "ASC",
+          "optoin2": "DESC",
+          "optoin3": "There is no default value",
+          "optoin4": "None of the mentioned"
+        },
+        "ques4":{
+          "ques": "9. Which of the following statement is true?",
+          "optoin1": "DELETE does not free the space containing the table and TRUNCATE free the space containing the table",
+          "optoin2": "Both DELETE and TRUNCATE free the space containing the table",
+          "optoin3": "Both DELETE and TRUNCATE does not free the space containing the table",
+          "optoin4": "DELETE free the space containing the table and TRUNCATE does not free the space containing the table"
+        },
+        "ques5":{
+          "ques": "10. Which clause is used to combine rows from two or more tables based on a related column between them.",
+          "optoin1": "SQL MATCH",
+          "optoin2": "SQL JOIN",
+          "optoin3": "SQL PATTERN",
+          "optoin4": "NONE"
+        }
+      },
+      "page3": {
+        "ques1":{
+          "ques": "11. What is the purpose of the SQL AS clause?",
+          "optoin1": "The AS SQL clause is used to change the name of a column in the result set or to assign a name to a derived column",
+          "optoin2": "The AS clause is used with the JOIN clause only",
+          "optoin3": "The AS clause defines a search condition",
+          "optoin4": "All of the mentioned"
+        },
+        "ques2":{
+          "ques": "12. Which is/are correct statements about primary key of a table?",
+          "optoin1": "Primary keys can contain NULL values",
+          "optoin2": "Primary keys cannot contain NULL values.",
+          "optoin3": "A table can have only one primary key with single or multiple fields",
+          "optoin4": "A table can have multiple primary keys with single or multiple fields"
+        },
+        "ques3":{
+          "ques": "13. In existing table, ALTER TABLE statement is used to",
+          "optoin1": "Add columns",
+          "optoin2": "Add constraints",
+          "optoin3": "Delete columns",
+          "optoin4": "Delete constrains all"
+        },
+        "ques4":{
+          "ques": "14. SQL Query to delete all rows in a table without deleting the table (structure, attributes, and indexes)",
+          "optoin1": "option1",
+          "optoin2": "option2",
+          "optoin3": "option3",
+          "optoin4": "option4"
+        },
+        "ques5":{
+          "ques": "15.To combine the result-set of two or more SELECT statements, SQL clause used is",
+          "optoin1": "SQL UNION",
+          "optoin2": "SQL JOIN",
+          "optoin3": "SQL GROUP BY",
+          "optoin4": "NONE"
+        }
+      },
+      "page4": {
+        "ques1":{
+          "ques": "16. Wrong statement about UPDATE keyword is",
+          "optoin1": "If WHERE clause in missing in statement the all records will be updated.",
+          "optoin2": "Only one record can be updated at a time using WHERE clause",
+          "optoin3": "Multiple records can be updated at a time using WHERE clause",
+          "optoin4": "None is wrong statement"
+        },
+        "ques2":{
+          "ques": "17. Wrong statement about ORDER BY keyword is",
+          "optoin1": "Used to sort the result-set in ascending or descending order",
+          "optoin2": "The ORDER BY keyword sorts the records in ascending order by default.",
+          "optoin3": "To sort the records in ascending order, use the ASC keyword.",
+          "optoin4": "To sort the records in descending order, use the DECENDING keyword."
+        },
+        "ques3":{
+          "ques": "18. Correct syntax query syntax to drop a column from a table is",
+          "optoin1": "DELETE COLUMN column_name",
+          "optoin2": "DROP COLUMN column_name",
+          "optoin3": "ALTER TABLE table_name DROP COLUMN column_name",
+          "optoin4": "None is correct."
+        },
+        "ques4":{
+          "ques": "19. If you want to allow age of a person > 18 in the column Age of table Person, then which constraint will be applied to AGE column.",
+          "optoin1": "Default",
+          "optoin2": "Check",
+          "optoin3": "NOT NULL",
+          "optoin4": "None"
+        },
+        "ques5":{
+          "ques": "20. In a table, a column contains duplicate value, if you want to list all different value only, then which SQL clause is used?",
+          "optoin1": "SQL DISTINCT",
+          "optoin2": "SQL UNIQUE",
+          "optoin3": "SQL BETWEEN",
+          "optoin4": "SQL Exists"
+        }
+      },
+      "page5": {
+        "ques1":{
+          "ques": "21. To give a temporary name to a table, or a column in a table for more readability, what is used?",
+          "optoin1": "SQL Wildcards",
+          "optoin2": "SQL aliases",
+          "optoin3": "SQL LIKES",
+          "optoin4": "SQL Comments"
+        },
+        "ques2":{
+          "ques": "22. SELECT CustomerName, Address + ‘, ‘ + City + ‘, ‘ + Country AS Address       FROM Customers;",
+          "optoin1": "Alias named Address column will be created and under this Address, City and Country will be printed as combined statement.",
+          "optoin2": "Alias named Address will be created for Country columns",
+          "optoin3": "Alias named Address column will be created and under this all CustomerName, address, city and country will be printed as combined statement",
+          "optoin4": "All above options are wrong"
+        },
+        "ques3":{
+          "ques": "23. Logical operators used in SQL are",
+          "optoin1": "AND, OR , NOT",
+          "optoin2": "&&, ||, !",
+          "optoin3": "$,|,!",
+          "optoin4": "None of the above"
+        },
+        "ques4":{
+          "ques": "24. To specify the number of records to return, which keyword is used",
+          "optoin1": "FIRST",
+          "optoin2": "TOP",
+          "optoin3": "START",
+          "optoin4": "ROW"
+        },
+        "ques5":{
+          "ques": "25. To search for a specified pattern in a column",
+          "optoin1": "SQL MATCH",
+          "optoin2": "SQL LIKE",
+          "optoin3": "SQL PATTERN",
+          "optoin4": "SQL SEARCH"
+        }
+      }
+  }
+}
