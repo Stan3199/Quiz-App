@@ -99,10 +99,10 @@
         },
         "ques4":{
           "ques": "14. SQL Query to delete all rows in a table without deleting the table (structure, attributes, and indexes)",
-          "optoin1": "option1",
-          "optoin2": "option2",
-          "optoin3": "option3",
-          "optoin4": "option4"
+          "optoin1": "DELETE FROM table_name",
+          "optoin2": "DELETE TABLE table_name",
+          "optoin3": "DROP TABLE table_name",
+          "optoin4": "NONE"
         },
         "ques5":{
           "ques": "15.To combine the result-set of two or more SELECT statements, SQL clause used is",

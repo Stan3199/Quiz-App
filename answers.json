@@ -1,0 +1,39 @@
+{
+    "answers":{
+        "page1":{
+            "ques1":{"optoin1":"COUNT()","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques2":{"optoin1":null,"optoin2":null,"optoin3":"MAX","optoin4":null},
+            "ques3":{"optoin1":"DELETE","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques4":{"optoin1":null,"optoin2":null,"optoin3":null,"optoin4":"TRUNCATE"},
+            "ques5":{"optoin1":"UPDATE","optoin2":null,"optoin3":null,"optoin4":null}
+        },
+        "page2":{
+            "ques1":{"optoin1":null,"optoin2":null,"optoin3":null,"optoin4":"ROLLBACK and SAVEPOINT"},
+            "ques2":{"optoin1":null,"optoin2":"SCL","optoin3":null,"optoin4":null},
+            "ques3":{"optoin1":"ASC","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques4":{"optoin1":"DELETE does not free the space containing the table and TRUNCATE free the space containing the table","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques5":{"optoin1":null,"optoin2":"SQL JOIN","optoin3":null,"optoin4":null}
+        },
+        "page3":{
+            "ques1":{"optoin1":"The AS SQL clause is used to change the name of a column in the result set or to assign a name to a derived column","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques2":{"optoin1":"Primary keys cannot contain NULL values.","optoin2":"A table can have only one primary key with single or multiple fields"},
+            "ques3":{"optoin1":"Add columns","optoin2":"Add constraints","optoin3":"Delete columns","optoin4":"Delete constrains all"},
+            "ques4":{"optoin1":"DELETE FROM table_name","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques5":{"optoin1":"SQL UNION","optoin2":null,"optoin3":null,"optoin4":null}
+        },
+        "page4":{
+            "ques1":{"optoin1":"Only one record can be updated at a time using WHERE clause"},
+            "ques2":{"optoin1":null,"optoin2":"To sort the records in descending order, use the DECENDING keyword.","optoin3":null,"optoin4":null},
+            "ques3":{"optoin1":null,"optoin2":null,"optoin3":"ALTER TABLE table_name DROP COLUMN column_name","optoin4":null},
+            "ques4":{"optoin1":null,"optoin2":"Check","optoin3":null,"optoin4":null},
+            "ques5":{"optoin1":"SQL DISTINCT","optoin2":null,"optoin3":null,"optoin4":null}
+        },
+        "page5":{
+            "ques1":{"optoin1":null,"optoin2":"SQL aliases","optoin3":null,"optoin4":null},
+            "ques2":{"optoin1":"Alias named Address column will be created and under this Address, City and Country will be printed as combined statement.","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques3":{"optoin1":"AND, OR , NOT","optoin2":null,"optoin3":null,"optoin4":null},
+            "ques4":{"optoin1":null,"optoin2":"TOP","optoin3":null,"optoin4":null},
+            "ques5":{"optoin1":null,"optoin2":"SQL LIKE","optoin3":null,"optoin4":null}
+        }
+    }
+}
