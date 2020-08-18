@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="index1.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            
+            var minute = 1;
+            var seconds=60;
+            for(i=0;i<=60;i++){
+                (function(i){
+                    setTimeout(function(){
+                        $("#time").html(minute +":"+seconds)
+                        if(i%60==0) minute--; 
+                        seconds--;
+                    },i*1000)
+                }(i));
+            }
+        })
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="Page" id="hi">Page1</h1>
+    <div class="timer"><h2 id="time"></h2></div>
+    <div class="questions">
+        <div class="quesclass1" id="Q11">
+            <ol>
+                <div id="Q1">
+            <span id="ques1title"><h3 id="ques1titlee"></h3></span>
+            <span id="quesopt1"><input id="r1" type="radio"></input><li id="q1op1"></li></span>
+            <span id="quesopt2"><input id="r2"type="radio"></input><li id="q1op2"></li></span>
+            <span id="quesopt3"><input id="r3" type="radio"></input><li id="q1op3"></li></span>
+            <span id="quesopt4"><input id="r4" type="radio"></input><li id="q1op4"></li></span>
+        </div>
+        </ol>
+        </div>
+        <div class="quesclass2" id="Q22">
+            <ol>
+                <div id="Q2">
+                    <span id="ques1title"><h3 id="ques1titlee"></h3></span>
+                    <span id="quesopt1"><input id="r1" type="radio"></input><li id="q1op1"></li></span>
+                    <span id="quesopt2"><input id="r2"type="radio"></input><li id="q1op2"></li></span>
+                    <span id="quesopt3"><input id="r3" type="radio"></input><li id="q1op3"></li></span>
+                    <span id="quesopt4"><input id="r4" type="radio"></input><li id="q1op4"></li></span>
+                </div>
+            </ol>
+            
+        </div>
+        <div class="quesclass3" id="Q33">
+            <ol>
+                    <div id="Q3">
+                        <span id="ques1title"><h3 id="ques1titlee"></h3></span>
+                        <span id="quesopt1"><input id="r1" type="radio"></input><li id="q1op1"></li></span>
+                        <span id="quesopt2"><input id="r2"type="radio"></input><li id="q1op2"></li></span>
+                        <span id="quesopt3"><input id="r3" type="radio"></input><li id="q1op3"></li></span>
+                        <span id="quesopt4"><input id="r4" type="radio"></input><li id="q1op4"></li></span>
+                    </div>
+            </ol>
+        </div>
+        <div class="quesclass4" id="Q44">
+            <ol>
+                    <div id="Q4">
+                        <span id="ques1title"><h3 id="ques1titlee"></h3></span>
+                        <span id="quesopt1"><input id="r1" type="radio"></input><li id="q1op1"></li></span>
+                        <span id="quesopt2"><input id="r2"type="radio"></input><li id="q1op2"></li></span>
+                        <span id="quesopt3"><input id="r3" type="radio"></input><li id="q1op3"></li></span>
+                        <span id="quesopt4"><input id="r4" type="radio"></input><li id="q1op4"></li></span>
+                    </div>
+                </ol>
+        </div>
+        <div class="quesclass5" id="Q55">
+            <ol>
+                    <div id="Q5">
+                        <span id="ques1title"><h3 id="ques1titlee"></h3></span>
+                        <span id="quesopt1"><input id="r1" type="radio"></input><li id="q1op1"></li></span>
+                        <span id="quesopt2"><input id="r2"type="radio"></input><li id="q1op2"></li></span>
+                        <span id="quesopt3"><input id="r3" type="radio"></input><li id="q1op3"></li></span>
+                        <span id="quesopt4"><input id="r4" type="radio"></input><li id="q1op4"></li></span>
+                    </div>
+            </ol>
+        </div>
+    </div>
+    <div class="buttons">
+        <span><button id="submit">Submit</button></span>
+        <span><button id="prev" >Back</button></span>
+        <span><button id="next">Next</button></span>
+        <span><button id="clear">Clear-All</button></span>
+    </div>
+    <script src="index1.js"></script>
+    <!-- <script src="test.js"></script> -->
+    <!-- <script>
+        a=document.getElementsByTagName("h1")[0].innerHTML;
+        console.log(a);
+    </script> -->
+</body>
+</html>
