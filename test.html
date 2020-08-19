@@ -9,14 +9,17 @@
             
             var minute = 5;
             var seconds=60;
-            for(i=0;i<=300;i++){
+            for(i=0;i<=60;i++){
                 (function(i){
                     setTimeout(function(){
                         $("#time").html(minute +":"+seconds)
                         if(i%60==0) minute--; 
                         seconds--;
+                        if(i==60) $("#submit").click();
                     },i*1000)
                 }(i));
+                console.log(i)
+                
             }
         })
     </script>

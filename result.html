@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".result").hide();
+            $("#replay").click(function(){
+                $(".result").show();
+            })  
+        })
+    </script>
     <title>Document</title>
 </head>
 <body>
     <div class="page">
-        <div class="result">
-            <span class="ques1" class="ques1"><h3>1.</h3><h3 id="ans1">answer</h3></span>
-            <span class="ques2" ><h3>2.</h3><h3 id="ans2">answer</h3></span>
-            <span class="ques3"><h3>3.</h3><h3 id="ans3">answer</h3></span>
-            <span class="ques4"><h3>4.</h3><h3 id="ans4">answer</h3></span>
-            <span class="ques5"><h3>5.</h3><h3 id="ans5">answer</h3></span>
-            <span class="ques6"><h3>6.</h3><h3 id="ans6">answer</h3></span>
-            <span class="ques7"><h3>7.</h3><h3 id="ans7">answer</h3></span>
-            <span class="ques8"><h3>8.</h3><h3 id="ans8">answer</h3></span>
-            <span class="ques9"><h3>9.</h3><h3 id="ans9">answer</h3></span>
-            <span class="ques10"><h3>10.</h3><h3 id="ans10">answer</h3></span>
-            <span class="ques11"><h3>11.</h3><h3 id="ans11">answer</h3></span>
-            <span class="ques12"><h3>12.</h3><h3 id="ans12">answer</h3></span>
-            <span class="ques13"><h3>13.</h3><h3 id="ans13">answer</h3></span>
-            <span class="ques14"><h3>14.</h3><h3 id="ans14">answer</h3></span>
-            <span class="ques15"><h3>15.</h3><h3 id="ans15">answer</h3></span>
-            <span class="ques16"><h3>16.</h3><h3 id="ans16">answer</h3></span>
-            <span class="ques17"><h3>17.</h3><h3 id="ans17">answer</h3></span>
-            <span class="ques18"><h3>18.</h3><h3 id="ans18">answer</h3></span>
-            <span class="ques19"><h3>19.</h3><h3 id="ans29">answer</h3></span>
-            <span class="ques20"><h3>20.</h3><h3 id="ans20">answer</h3></span>
-            <span class="ques21"><h3>21.</h3><h3 id="ans21">answer</h3></span>
-            <span class="ques22"><h3>22.</h3><h3 id="ans22">answer</h3></span>
-            <span class="ques23"><h3>23.</h3><h3 id="ans23">answer</h3></span>
-            <span class="ques24"><h3>24.</h3><h3 id="ans24">answer</h3></span>
-            <span class="ques25"><h3>25.</h3><h3 id="ans25">answer</h3></span>
+        <div class="percentage" ><h3 id="perc"></h3>
+            <span class ="replay" id="replay"><button id="repbut">Replay</button></span>
+        </div>
+        <div id="r" class="result">
+            <span class="ques1" class="ques1"><h3>1.</h3><h3 id="ans1">Your answer: </h3></span>
+            <span class="ques2" ><h3>2.</h3><h3 id="ans2">Your answer: </h3></span>
+            <span class="ques3"><h3>3.</h3><h3 id="ans3">Your answer: </h3></span>
+            <span class="ques4"><h3>4.</h3><h3 id="ans4">Your answer: </h3></span>
+            <span class="ques5"><h3>5.</h3><h3 id="ans5">Your answer: </h3></span>
+            <span class="ques6"><h3>6.</h3><h3 id="ans6">Your answer: </h3></span>
+            <span class="ques7"><h3>7.</h3><h3 id="ans7">Your answer: </h3></span>
+            <span class="ques8"><h3>8.</h3><h3 id="ans8">Your answer: </h3></span>
+            <span class="ques9"><h3>9.</h3><h3 id="ans9">Your answer: </h3></span>
+            <span class="ques10"><h3>10.</h3><h3 id="ans10">Your answer: </h3></span>
+            <span class="ques11"><h3>11.</h3><h3 id="ans11">Your answer: </h3></span>
+            <span class="ques12"><h3>12.</h3><h3 id="ans12">Your answer: </h3></span>
+            <span class="ques13"><h3>13.</h3><h3 id="ans13">Your answer: </h3></span>
+            <span class="ques14"><h3>14.</h3><h3 id="ans14">Your answer: </h3></span>
+            <span class="ques15"><h3>15.</h3><h3 id="ans15">Your answer: </h3></span>
+            <span class="ques16"><h3>16.</h3><h3 id="ans16">Your answer: </h3></span>
+            <span class="ques17"><h3>17.</h3><h3 id="ans17">Your answer: </h3></span>
+            <span class="ques18"><h3>18.</h3><h3 id="ans18">Your answer: </h3></span>
+            <span class="ques19"><h3>19.</h3><h3 id="ans29">Your answer: </h3></span>
+            <span class="ques20"><h3>20.</h3><h3 id="ans20">Your answer: </h3></span>
+            <span class="ques21"><h3>21.</h3><h3 id="ans21">Your answer: </h3></span>
+            <span class="ques22"><h3>22.</h3><h3 id="ans22">Your answer: </h3></span>
+            <span class="ques23"><h3>23.</h3><h3 id="ans23">Your answer: </h3></span>
+            <span class="ques24"><h3>24.</h3><h3 id="ans24">Your answer: </h3></span>
+            <span class="ques25"><h3>25.</h3><h3 id="ans25">Your answer: </h3></span>
         </div>
     </div>
 </body>

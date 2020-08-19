@@ -21,17 +21,42 @@ module Test{
                             var pagedata=andata[pdata];
                             for(var quest in pagedata){
                                 $("#ans"+ansno).html()
-                                if(JSON.stringify(pagedata[quest])==JSON.stringify(lodata[quest])) {count++;console.log(count)}
-
+                                if(JSON.stringify(pagedata[quest])==JSON.stringify(lodata[quest])) {
+                                    var questt=pagedata[quest];
+                                    count++;console.log(count)
+                                    for(var op in questt){
+                                        console.log(questt)
+                                        if(questt[op]!=null){ console.log(questt[op]);$("#ans"+ansno).append(questt[op])}
+                                    }
+                                    
+                                    $("#ans"+ansno).css("color":"green");
+                                }
+                                else {
+                                    $("#ans"+ansno).css("color":"red");
+                                    // $("#ans"+ansno).append(pagedata[quest]);
+                                    var questt=lodata[quest];
+                                    for(var op in questt){
+                                        var count2=0;
+                                        console.log(questt)
+                                        if(questt[op]!=null){ console.log(questt[op]);$("#ans"+ansno).append(questt[op])}
+                                        else count2++;
+                                        if(count2==4) $("#ans"+ansno).append("Not attempted")
+                                    }
+                                    
+                                    $("#ans"+ansno).css("color":"red");
+                                }
+                                ansno++;
                             }
                         }
+                   
                     }
+                    $("#perc").html(((count/25)*100)+"%");
                     
-
                 },
                 error: function(error){
 
                 }
+                
             })
         }
     }
