@@ -5,6 +5,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="index1.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var obj ={
+                "ques1":{"optoin1":null,"optoin2":null,"optoin3":null,"optoin4":null},
+                "ques2":{"optoin1":null,"optoin2":null,"optoin3":null,"optoin4":null},
+                "ques3":{"optoin1":null,"optoin2":null,"optoin3":null,"optoin4":null},
+                "ques4":{"optoin1":null,"optoin2":null,"optoin3":null,"optoin4":null},
+                "ques5":{"optoin1":null,"optoin2":null,"optoin3":null,"optoin4":null}
+            }
+            localStorage.clear();
+            for(i=1;i<6;i++) localStorage.setItem("page"+i,JSON.stringify(obj))
+    </script>
     <title>Document</title>
 </head>
 <body>

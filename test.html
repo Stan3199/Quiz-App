@@ -9,13 +9,17 @@
             
             var minute = 5;
             var seconds=60;
-            for(i=0;i<=60;i++){
+            var sminute =0;var ssec=0;
+            for(i=0;i<=300;i++){
                 (function(i){
                     setTimeout(function(){
-                        $("#time").html(minute +":"+seconds)
-                        if(i%60==0) minute--; 
-                        seconds--;
-                        if(i==60) $("#submit").click();
+                        if(i==300) $("#submit").click()
+                        if(seconds<=9) $("#time").html(minute+":0"+seconds)
+                        else $("#time").html(minute +":"+seconds)
+                        if(i%60==0){minute-- ; seconds=60; localStorage.setItem("minute",sminute++);}
+                        seconds--; ssec++;localStorage.setItem("sec",ssec);
+                        
+                        
                     },i*1000)
                 }(i));
                 console.log(i)

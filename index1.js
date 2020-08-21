@@ -8,8 +8,9 @@ var Ajaxx;
     }());
     Ajaxx.Optionss = Optionss;
     var req = /** @class */ (function () {
-        function req(page) {
-            this.page = "page1";
+        function req() {
+            this.pag = "page1";
+            // constructor(page?:string) {this.page=page;}
             this.get = function (pagee, reqq) {
                 if (reqq === void 0) { reqq = new Optionss("./db.json"); }
                 $.ajax({
@@ -112,7 +113,6 @@ var Ajaxx;
                 // console.log(obj)
                 console.log(JSON.parse(localStorage.getItem(page)));
             };
-            this.page = page;
         }
         return req;
     }());
@@ -151,12 +151,14 @@ var Ajaxx;
         uncheckAll();
     });
     $("#submit").click(function () {
-        exec.submit("page5");
-        console.log(JSON.parse(localStorage.getItem('page1')));
-        console.log(JSON.parse(localStorage.getItem('page2')));
-        console.log(JSON.parse(localStorage.getItem('page3')));
-        console.log(JSON.parse(localStorage.getItem('page4')));
-        console.log(JSON.parse(localStorage.getItem('page5')));
+        localStorage.setItem("time", $("#time").html());
+        exec.submit(pag);
+        console.log($("#time").html());
+        // console.log(JSON.parse(localStorage.getItem('page1')));
+        // console.log(JSON.parse(localStorage.getItem('page2')));
+        // console.log(JSON.parse(localStorage.getItem('page3')));
+        // console.log(JSON.parse(localStorage.getItem('page4')));
+        // console.log(JSON.parse(localStorage.getItem('page5')));
         window.location.href = "./result.html";
     });
     // function prevPage(){i--;}

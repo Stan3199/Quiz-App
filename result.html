@@ -9,7 +9,11 @@
             $(".result").hide();
             $("#replay").click(function(){
                 $(".result").show();
-            })  
+            })
+            console.log(JSON.parse(localStorage.getItem("minute")))
+            if(JSON.parse(localStorage.getItem("sec"))>9) $("#time").append(JSON.parse(localStorage.getItem("minute"))+":"+JSON.parse(localStorage.getItem("sec")));
+            else $("#time").append($("#time").append(JSON.parse(localStorage.getItem("minute"))+":0"+JSON.parse(localStorage.getItem("sec"))))
+            // $("#time").append(JSON.parse(localStorage.getItem("time")))  
         })
     </script>
     <title>Document</title>
@@ -18,33 +22,34 @@
     <div class="page">
         <div class="percentage" ><h3 id="perc"></h3>
             <span class ="replay" id="replay"><button id="repbut">Replay</button></span>
+            <span class="time"><h3 id ="time">Time taken: </h3></span>
         </div>
         <div id="r" class="result">
-            <span class="ques1" class="ques1"><h3>1.</h3><h3 id="ans1">Your answer: </h3></span>
-            <span class="ques2" ><h3>2.</h3><h3 id="ans2">Your answer: </h3></span>
-            <span class="ques3"><h3>3.</h3><h3 id="ans3">Your answer: </h3></span>
-            <span class="ques4"><h3>4.</h3><h3 id="ans4">Your answer: </h3></span>
-            <span class="ques5"><h3>5.</h3><h3 id="ans5">Your answer: </h3></span>
-            <span class="ques6"><h3>6.</h3><h3 id="ans6">Your answer: </h3></span>
-            <span class="ques7"><h3>7.</h3><h3 id="ans7">Your answer: </h3></span>
-            <span class="ques8"><h3>8.</h3><h3 id="ans8">Your answer: </h3></span>
-            <span class="ques9"><h3>9.</h3><h3 id="ans9">Your answer: </h3></span>
-            <span class="ques10"><h3>10.</h3><h3 id="ans10">Your answer: </h3></span>
-            <span class="ques11"><h3>11.</h3><h3 id="ans11">Your answer: </h3></span>
-            <span class="ques12"><h3>12.</h3><h3 id="ans12">Your answer: </h3></span>
-            <span class="ques13"><h3>13.</h3><h3 id="ans13">Your answer: </h3></span>
-            <span class="ques14"><h3>14.</h3><h3 id="ans14">Your answer: </h3></span>
-            <span class="ques15"><h3>15.</h3><h3 id="ans15">Your answer: </h3></span>
-            <span class="ques16"><h3>16.</h3><h3 id="ans16">Your answer: </h3></span>
-            <span class="ques17"><h3>17.</h3><h3 id="ans17">Your answer: </h3></span>
-            <span class="ques18"><h3>18.</h3><h3 id="ans18">Your answer: </h3></span>
-            <span class="ques19"><h3>19.</h3><h3 id="ans29">Your answer: </h3></span>
-            <span class="ques20"><h3>20.</h3><h3 id="ans20">Your answer: </h3></span>
-            <span class="ques21"><h3>21.</h3><h3 id="ans21">Your answer: </h3></span>
-            <span class="ques22"><h3>22.</h3><h3 id="ans22">Your answer: </h3></span>
-            <span class="ques23"><h3>23.</h3><h3 id="ans23">Your answer: </h3></span>
-            <span class="ques24"><h3>24.</h3><h3 id="ans24">Your answer: </h3></span>
-            <span class="ques25"><h3>25.</h3><h3 id="ans25">Your answer: </h3></span>
+            <span class="ques1" class="ques1"><h3>1.</h3><h3 id="ans1">Your answer: <h3 id ="crans1">Correct answer: </h3></span>
+            <span class="ques2" ><h3>2.</h3><h3 id="ans2">Your answer: <h3 id ="crans2">Correct answer: </h3></span>
+            <span class="ques3"><h3>3.</h3><h3 id="ans3">Your answer: <h3 id ="crans3">Correct answer: </h3></span>
+            <span class="ques4"><h3>4.</h3><h3 id="ans4">Your answer: <h3 id ="crans4">Correct answer: </h3></span>
+            <span class="ques5"><h3>5.</h3><h3 id="ans5">Your answer: <h3 id ="crans5">Correct answer: </h3></span>
+            <span class="ques6"><h3>6.</h3><h3 id="ans6">Your answer: <h3 id ="crans6">Correct answer: </h3></span>
+            <span class="ques7"><h3>7.</h3><h3 id="ans7">Your answer: <h3 id ="crans7">Correct answer: </h3></span>
+            <span class="ques8"><h3>8.</h3><h3 id="ans8">Your answer: <h3 id ="crans8">Correct answer: </h3></span>
+            <span class="ques9"><h3>9.</h3><h3 id="ans9">Your answer: <h3 id ="crans9">Correct answer: </h3></span>
+            <span class="ques10"><h3>10.</h3><h3 id="ans10">Your answer: <h3 id ="crans10">Correct answer: </h3></span>
+            <span class="ques11"><h3>11.</h3><h3 id="ans11">Your answer: <h3 id ="crans11">Correct answer: </h3></span>
+            <span class="ques12"><h3>12.</h3><h3 id="ans12">Your answer: <h3 id ="crans12">Correct answer: </h3></span>
+            <span class="ques13"><h3>13.</h3><h3 id="ans13">Your answer: <h3 id ="crans13">Correct answer: </h3></span>
+            <span class="ques14"><h3>14.</h3><h3 id="ans14">Your answer: <h3 id ="crans14">Correct answer: </h3></span>
+            <span class="ques15"><h3>15.</h3><h3 id="ans15">Your answer: <h3 id ="crans15">Correct answer: </h3></span>
+            <span class="ques16"><h3>16.</h3><h3 id="ans16">Your answer: <h3 id ="crans16">Correct answer: </h3></span>
+            <span class="ques17"><h3>17.</h3><h3 id="ans17">Your answer: <h3 id ="crans17">Correct answer: </h3></span>
+            <span class="ques18"><h3>18.</h3><h3 id="ans18">Your answer: <h3 id ="crans18">Correct answer: </h3></span>
+            <span class="ques19"><h3>19.</h3><h3 id="ans29">Your answer: <h3 id ="crans19">Correct answer: </h3></span>
+            <span class="ques20"><h3>20.</h3><h3 id="ans20">Your answer: <h3 id ="crans20">Correct answer: </h3></span>
+            <span class="ques21"><h3>21.</h3><h3 id="ans21">Your answer: <h3 id ="crans21">Correct answer: </h3></span>
+            <span class="ques22"><h3>22.</h3><h3 id="ans22">Your answer: <h3 id ="crans22">Correct answer: </h3></span>
+            <span class="ques23"><h3>23.</h3><h3 id="ans23">Your answer: <h3 id ="crans23">Correct answer: </h3></span>
+            <span class="ques24"><h3>24.</h3><h3 id="ans24">Your answer: <h3 id ="crans24">Correct answer: </h3></span>
+            <span class="ques25"><h3>25.</h3><h3 id="ans25">Your answer: <h3 id ="crans25">Correct answer: </h3></span>
         </div>
     </div>
 </body>

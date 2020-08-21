@@ -5,8 +5,8 @@ module Ajaxx {
         
     }
     export class req {
-        page="page1";
-        constructor(page?:string) {this.page=page;}
+        pag="page1";
+        // constructor(page?:string) {this.page=page;}
         public get =(pagee:string,reqq: Optionss=new Optionss("./db.json")) : void =>{
             $.ajax({
                 url: reqq.url,
@@ -137,12 +137,14 @@ module Ajaxx {
         uncheckAll();
     })
     $("#submit").click(function(){
-        exec.submit("page5");
-        console.log(JSON.parse(localStorage.getItem('page1')));
-        console.log(JSON.parse(localStorage.getItem('page2')));
-        console.log(JSON.parse(localStorage.getItem('page3')));
-        console.log(JSON.parse(localStorage.getItem('page4')));
-        console.log(JSON.parse(localStorage.getItem('page5')));
+        localStorage.setItem("time",$("#time").html())
+        exec.submit(pag);
+        console.log($("#time").html())
+        // console.log(JSON.parse(localStorage.getItem('page1')));
+        // console.log(JSON.parse(localStorage.getItem('page2')));
+        // console.log(JSON.parse(localStorage.getItem('pzage3')));
+        // console.log(JSON.parse(localStorage.getItem('page4')));
+        // console.log(JSON.parse(localStorage.getItem('page5')));
         window.location.href="./result.html"
     })
     // function prevPage(){i--;}
