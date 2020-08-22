@@ -16,7 +16,7 @@
         },
         "page3":{
             "ques1":{"optoin1":"The AS SQL clause is used to change the name of a column in the result set or to assign a name to a derived column","optoin2":null,"optoin3":null,"optoin4":null},
-            "ques2":{"optoin1":"Primary keys cannot contain NULL values.","optoin2":"A table can have only one primary key with single or multiple fields"},
+            "ques2":{"optoin1":"Primary keys cannot contain NULL values.","optoin2":"A table can have only one primary key with single or multiple fields","optoin3":null,"optoin4":null},
             "ques3":{"optoin1":"Add columns","optoin2":"Add constraints","optoin3":"Delete columns","optoin4":"Delete constrains all"},
             "ques4":{"optoin1":"DELETE FROM table_name","optoin2":null,"optoin3":null,"optoin4":null},
             "ques5":{"optoin1":"SQL UNION","optoin2":null,"optoin3":null,"optoin4":null}
