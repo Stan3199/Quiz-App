@@ -1,0 +1,244 @@
+﻿@using SaaSFulfillmentClient.Models
+@model AzureSubscriptionProvisionModel
+
+@{ ViewData["Title"] = "Index"; }
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="./css/site.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dashboard</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <style>
+        #footer a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #3a31aa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="@Url.Content("~/images/MAQSoftware.png")" alt="Loo" style="width: 180px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        @*<partial name="_CookieConsentPartial" />*@
+        <main role="main" class="pb-3">
+            <h1>Configure subscription</h1>
+
+            <p>The publisher can add new fields to the form like below to capture more information from the subscriber and style as necessary.</p>
+
+            <hr />
+
+            <span class="text-danger">@Html.ValidationSummary(false)</span>
+
+            <form asp-action="Index">
+                <div class="container">
+                    <dl class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="row">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.Email)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.Email)
+                                        <input asp-for="Email" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+
+                                <div class="row">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.FullName)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.FullName)
+                                        <input asp-for="FullName" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+
+                            </div>
+
+                            <div class="panel panel-default">
+
+                                <div class="row">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.OfferId)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.OfferId)
+                                        <input asp-for="OfferId" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+
+                                <div class="row">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.PlanId)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.PlanId)
+                                        <input asp-for="PlanId" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+
+                                <div class="row">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.PurchaserEmail)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.PurchaserEmail)
+                                        <input asp-for="PurchaserEmail" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+
+                                <div class="row" style="display:none">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.PurchaserTenantId)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.PurchaserTenantId)
+                                        <input asp-for="PurchaserTenantId" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+
+                                @if (Model.SubscriptionStatus == StatusEnum.Subscribed)
+                                {
+                                    <div class="row">
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.AvailablePlans)
+                                        </dt>
+
+                                        <dd class="col-sm-10">
+
+                                            <select asp-for="NewPlanId" asp-items="@(new SelectList(Model.AvailablePlans, "PlanId", "DisplayName"))" class="form-control">
+                                                <option value="">Choose a new plan, or plan you wish to be on.</option>
+                                            </select>
+                                        </dd>
+                                    </div>
+                                }
+
+                                <div class="row" style="display:none">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.SubscriptionId)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.SubscriptionId)
+                                        <input asp-for="SubscriptionId" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+
+                                <div class="row">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.SubscriptionName)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.SubscriptionName)
+                                        <input asp-for="SubscriptionName" type="hidden" class="form-control" />
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                @*<div class="row">
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.Region)
+                                        </dt>
+                                        <dd class="col-sm-2">
+                                            <select asp-for="Region" asp-items="Html.GetEnumSelectList<TargetContosoRegionEnum>()" class="form-control">
+                                                <option selected="selected" value="">Please select</option>
+                                            </select>
+                                        </dd>
+                                        <div class="col-sm-8"></div>
+                                    </div>*@
+
+                                <div class="row">
+                                    <dt class="col-sm-2">
+                                        @Html.DisplayNameFor(model => model.BusinessUnitContactEmail)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <input asp-for="BusinessUnitContactEmail" type="email" class="form-control" />
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p>*The purchaser (who sees this page) can be different than the actual user of the solution.</p>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                    @* Just to carry over the subscription status, so we can determine if we are here for initial
+                        provisioning or configuration later in the life of the subscription*@
+                    <input asp-for="SubscriptionStatus" type="hidden" class="form-control" />
+                </div>
+                <div>
+                    <input type="submit"
+                           value="Submit"
+                           class="btn btn-primary" />
+                </div>
+            </form>
+        </main>
+    </div>
+    <div id='footer' style="width: 80%;
+left:80px;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;">
+        <p>
+            &#169; <span id="copyright_year"></span>
+            <a target="_blank" href="https://maqsoftware.com"><b> MAQ Software</b></a>
+            . All Rights Reserved.
+            <span className="link-privacy"><a target="_blank" href="https://maqsoftware.com/privacystatement"> Privacy Statement | </a></span>
+            <span className="link-privacy"><a target="_blank" href="https://maqsoftware.com/termsofservice">Terms of Service</a></span>
+        </p>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"></script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @*@RenderSection("Scripts", false)*@
+</body>
+</html>

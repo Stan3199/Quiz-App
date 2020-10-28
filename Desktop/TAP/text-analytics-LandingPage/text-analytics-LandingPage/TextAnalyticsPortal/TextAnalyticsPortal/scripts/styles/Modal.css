@@ -1,0 +1,49 @@
+.modal {
+    font-size: 12px;
+    border-radius: 2px;
+  }
+  .modal > .header {
+    width: 100%;
+    border-bottom: 1px solid #3a31aa;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+  }
+  .modal > .content {
+    width: 100%;
+    padding: 10px 5px;
+    text-align: left;
+  }
+  .modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+  }
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }
+  .button{
+      background-color: #534e9b;
+  }
+.popup-content{
+border-radius: 4px;
+
+}
+.content,textarea{
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.00938em;
+  color: rgba(0, 0, 0, 0.54);
+}

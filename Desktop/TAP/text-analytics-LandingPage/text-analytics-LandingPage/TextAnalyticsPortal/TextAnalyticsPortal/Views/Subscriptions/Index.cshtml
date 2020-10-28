@@ -1,0 +1,215 @@
+﻿@using SaaSFulfillmentClient.Models
+@model IEnumerable<SubscriptionViewModel>
+@{ ViewData["Title"] = "All Offer Subscriptions"; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dashboard</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="@Url.Content("~/images/MAQSoftware.png")" alt="Loo" style="width: 180px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="ccontainer">
+        @*<partial name="_CookieConsentPartial" />*@
+        <main role="main" class="pb-3">
+            <div class="container-fluid">
+                <h1>Subscriptions for all of the offers</h1>
+                <br />
+                <span class="anchor">Status filter: </span>
+                <div class="d-inline-block">
+                    @foreach (var status in Enum.GetNames(typeof(StatusEnum)))
+                    {
+
+                        <input type="checkbox" class="statusCheckbox" id="@status" checked /> @status}
+                </div>
+                <table class="table table-sm w-auto text-xsmall">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.SubscriptionName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.State)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.OfferId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PlanId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PurchaserEmail)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.PurchaserTenantId)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.Quantity)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.SubscriptionId)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.TermStart)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.TermEnd)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.TermUnit)
+                            </th>
+
+                            <th>Actions</th>
+                            <th>Pending operations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="@item.State">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SubscriptionName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.State)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OfferId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PlanId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PurchaserEmail)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PurchaserTenantId)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Quantity)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SubscriptionId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TermStart)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TermEnd)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TermUnit)
+                                </td>
+
+                                <td>
+                                    @if (!item.PendingOperations)
+                                    {
+                                        @foreach (var a in item.NextActions)
+                                        {
+                                            <span> @Html.ActionLink(Enum.GetName(typeof(ActionsEnum), a), "SubscriptionAction", new { subscriptionAction = a, subscriptionId = item.SubscriptionId }) </span>} }
+                                    else
+                                    {
+                                        <span>Pending operations</span>}
+                                </td>
+                                <td>
+                                    @if (item.ExistingOperations)
+                                    {
+                                        @Html.ActionLink("Operations", "Operations", new { item.SubscriptionId })}
+
+                                </td>
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            
+
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $("#copyright_year").html(new Date().getFullYear())
+                    $(".statusCheckbox").change(function () {
+                        if (this.checked) {
+                            $("tr." + this.id).show();
+                        }
+                        else {
+                            $("tr." + this.id).hide();
+                        }
+                    });
+                });
+            </script>
+        </main>
+        <div id="footer-textanalytics-dataconnect" style="width: 80%; text-align: center; position: fixed; bottom: 5px; left:180px">
+            <p>
+                &#169; <span id="copyright_year"></span>
+                <a target="_blank" href="https://maqsoftware.com"><b> MAQ Software</b></a>
+                . All Rights Reserved.
+                <span className="link-privacy"><a target="_blank" href="https://maqsoftware.com/privacystatement"> Privacy Statement | </a></span>
+                <span className="link-privacy"><a target="_blank" href="https://maqsoftware.com/termsofservice">Terms of Service</a></span>
+            </p>
+        </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @*@RenderSection("Scripts", false)*@
+</body>
+</html>

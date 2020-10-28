@@ -1,0 +1,118 @@
+.top-nav{
+    display: flex;
+    width :100%;
+    background-color: white;
+    height: 107px;
+}
+.MuiPaper-root{
+    width: 100%;
+    background-color: none;
+    padding-top: 12px !important;
+}
+.content-landing{
+
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.image-div{
+    width: 50%;
+    padding: 24px;
+}
+.info-div{
+    width: 50%;
+    padding: 24px;
+}
+.title-text{
+ margin-top: 0px !important;
+ margin-bottom: 0px !important;
+  
+
+    text-align: left;
+    font: normal normal bold 72px/98px Arial;
+    letter-spacing: 0px;
+    color: #2C2C49;
+    opacity: 1;
+}
+.description-text{
+
+text-align: left;
+font: normal normal normal 26px/31px Arial;
+letter-spacing: 0px;
+color: #2C2C49;
+opacity: 1;
+}
+.upload-btn
+{
+width: 80%;
+    background: #534E9B 0% 0% no-repeat padding-box;
+    border-radius: 34px;
+    opacity: 1;
+
+font: normal normal bold 32px/37px Arial;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+
+height: 10%;
+}
+.data-upload{
+
+    background-color: #FFFFFF;
+    height:60px;
+    border-radius: 5px;
+    border: 3px dashed #534E9B;
+    overflow: hidden;
+    position: relative;
+}
+.data-upload img{
+    height: 66px;
+    width: auto;
+    
+}
+input[type='file']{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+.data-middle{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.data-middle span{
+   
+    padding-top: 14px;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: grey;
+}
+.data-enter{
+    width:100%;
+    background-color: #FFFFFF;
+    height:200px;
+    border-radius: 5px;
+    
+}
+#data-area{
+    box-sizing: border-box;
+ height: 100%;
+ width: 100%;
+ margin: 0 !important;
+background-color: transparent;
+resize: none;
+}
+.nav-button{
+    width: 172px;
+    height: 32px;
+    margin-right: 15px;
+    background-color: #534E9B;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    
+}
+button :disabled, button[disabled]{
+    background-color:lightgray;
+}

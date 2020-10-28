@@ -1,0 +1,27 @@
+.unknown-card-grid-main {
+    height: 10rem;
+    text-align: left;
+    font-weight: 600;
+}
+#card-topic-holder {
+    display: inline-grid;
+    width: 50%;
+    top: 30%;
+    position: relative;
+}
+#card-score-holder {
+    display: inline-grid;
+    width: 50%;
+    top: 30%;
+    position: relative;
+}
+.unknown-card-topic {
+    color: black;
+    text-align:center;
+}
+.unknown-card-value {
+    color: #3a31aa;
+    font-size: 18px;
+    text-align: center;
+}
+ 

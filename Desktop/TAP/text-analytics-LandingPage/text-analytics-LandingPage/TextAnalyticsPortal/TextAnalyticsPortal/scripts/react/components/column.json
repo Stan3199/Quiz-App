@@ -1,0 +1,9 @@
+[{
+"Header": "Reviews / Comment",
+"accessor": "text"
+},
+{"Header": "Sentiment",
+"accessor": "Dominant_Topic_Name"},
+{
+"Header": "Sentiment Score(%)",
+"accessor": "Topic_Perc_Contrib"}]

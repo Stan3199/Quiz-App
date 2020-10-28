@@ -1,0 +1,214 @@
+﻿html {
+    background-color: #f7f6fe;
+}
+
+.card-container {
+    margin-top: 0px;
+    display: flex;
+}
+
+#sentimentanalysis-main {
+    background-color: #f7f6fe;
+    min-height: calc(100% - 120px);
+    padding-top: 90px;
+    padding-right: 2%;
+    transition: padding-left .3s;
+}
+
+.info-card {
+    border-radius: 2px;
+    margin: 12px;
+    width: 20%;
+    background-color: white;
+}
+
+.info-card-title {
+    background-color: #3a31aa;
+    margin: auto;
+    text-align: center;
+    color: white;
+    height: 25px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+#bar-graph {
+    border-radius: 2px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 17px;
+    text-align: center;
+    background-color: white;
+}
+
+.column {
+    border-radius: 2px;
+    margin: 12px;
+    width: 30%;
+    background-color: white;
+    position: relative;
+}
+
+    .column img {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+.detail-view {
+    border-radius: 2px;
+    width: 66%;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    background-color: white;
+    height: 300px;
+}
+
+@media (max-width: 1300px) {
+    .detail-view {
+        border-radius: 2px;
+        width: 66%;
+        margin-left: 0px;
+        margin-right: 12px;
+        margin-top: 0px;
+        margin-bottom: 100px;
+        background-color: white;
+        height: 300px;
+    }
+}
+
+.MuiTab-root {
+    max-width: none !important;
+}
+
+.MuiBox-root-82 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.MuiBox-root, .MuiBox-root {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: #f7f6fe;
+    padding-top: 2px !important;
+}
+
+.ReactTable .rt-th, .ReactTable .rt-td {
+    text-align: left !important;
+}
+
+.tool {
+    height: 20px !important;
+    width: 20px;
+    position: absolute !important;
+    bottom: 4px !important;
+}
+
+.heading {
+    color: #3a31aa;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif';
+}
+
+.graph {
+    padding: 50px 23px 50px 10px;
+    height: 300px;
+}
+
+.table {
+    padding: 20px !important;
+    height: 350px !important;
+}
+
+.cardcomponent-main svg {
+    margin-top: 4%;
+    height: 60%;
+}
+
+#info-span {
+    font-size: 41px;
+    padding-left: 5%;
+    padding-top: 5%;
+    color: #3a31aa;
+}
+
+@media (min-width: 1564px) {
+    #info-span {
+        font-size: 41px;
+        padding-left: 5%;
+        padding-top: 8%;
+        color: #3a31aa;
+    }
+}
+
+
+.grid-title1-sent {
+    grid-column: col / span 4;
+    grid-row: row 3;
+}
+
+.grid-title2-sent {
+    grid-column: col 5 / span 4;
+    grid-row: row 3;
+}
+
+.grid-title3-sent {
+    grid-column: col 9 / span 4;
+    grid-row: row 3;
+}
+
+.grid-item1-sent {
+    grid-column: col / span 4;
+    grid-row: row 4;
+    padding: 20px !important;
+}
+
+.grid-item2-sent {
+    grid-column: col 5 / span 4;
+    grid-row: row 4;
+    padding: 20px !important;
+}
+
+.grid-item3-sent {
+    grid-column: col 9 / span 4;
+    grid-row: row 4;
+    padding: 20px !important;
+}
+
+.grid-title7-sent {
+    grid-column: col / span 6;
+    grid-row: row;
+}
+
+.grid-title8-sent {
+    grid-column: col 7 / span 6;
+    grid-row: row;
+}
+
+.grid-item7-sent {
+    grid-column: col / span 6;
+    grid-row: row 2;
+    padding: 20px !important;
+}
+
+.grid-item8-sent {
+    grid-column: col 7 / span 6;
+    grid-row: row 2;
+    padding: 20px !important;
+}
+
+.grid-title9-sent {
+    grid-column: col / span 12;
+    grid-row: row 5;
+}
+
+.grid-item9-sent {
+    grid-column: col / span 12;
+    grid-row: row 6;
+    padding: 20px !important;
+}

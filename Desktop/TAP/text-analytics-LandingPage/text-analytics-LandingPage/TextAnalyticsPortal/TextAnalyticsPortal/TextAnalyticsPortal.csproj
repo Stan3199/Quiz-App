@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>aspnet-TextAnalyticsPortal-5C649797-1B2C-43E8-AC87-45BAE6C65DB2</UserSecretsId>
+    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="react\**" />
+    <Compile Remove="wwwroot\react\**" />
+    <Content Remove="react\**" />
+    <Content Remove="wwwroot\react\**" />
+    <EmbeddedResource Remove="react\**" />
+    <EmbeddedResource Remove="wwwroot\react\**" />
+    <None Remove="react\**" />
+    <None Remove="wwwroot\react\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AzureMarketplaceSaaSApiClient" Version="3.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.5" />
+    <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="SendGrid" Version="9.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\dist\" />
+    <Folder Include="wwwroot\dist\app\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\MAQTextAnalyticsDev - Web Deploy.pubxml.user" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Success.cshtml" />
+    <None Include="Views\LandingPage\Index.cshtml" />
+    <None Include="Views\LandingPage\Success.cshtml" />
+    <None Include="Views\MailLink\Activate.cshtml" />
+    <None Include="Views\MailLink\MailActionError.cshtml" />
+    <None Include="Views\MailLink\OperationUpdate.cshtml" />
+    <None Include="Views\MailLink\Update.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\Static\Privacy.cshtml" />
+    <None Include="Views\Static\Support.cshtml" />
+    <None Include="Views\Subscriptions\Index.cshtml" />
+    <None Include="Views\Subscriptions\NotAuthorized.cshtml" />
+    <None Include="Views\Subscriptions\Operations.cshtml" />
+    <None Include="Views\Subscriptions\SubscriptionAction.cshtml" />
+    <None Include="Views\Subscriptions\UpdateSubscription.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+    <None Include="wwwroot\images\dataconnect.svg" />
+    <None Include="wwwroot\images\developerzone.svg" />
+    <None Include="wwwroot\images\developerzone_disabled.svg" />
+    <None Include="wwwroot\images\download.svg" />
+    <None Include="wwwroot\images\edit.svg" />
+    <None Include="wwwroot\images\edit2.svg" />
+    <None Include="wwwroot\images\hamburger.svg" />
+    <None Include="wwwroot\images\hamburger_dark.svg" />
+    <None Include="wwwroot\images\microsoft-logo.svg" />
+    <None Include="wwwroot\images\Pencil.svg" />
+    <None Include="wwwroot\images\rerun.svg" />
+    <None Include="wwwroot\images\sentimentanalysis.svg" />
+    <None Include="wwwroot\images\sentimentanalysis_disabled.svg" />
+    <None Include="wwwroot\images\sidenavigation.svg" />
+    <None Include="wwwroot\images\topicmodelling.svg" />
+    <None Include="wwwroot\images\topicmodelling_disabled.svg" />
+    <None Include="wwwroot\images\upload.svg" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,277 @@
+﻿#dataconnect-main {
+    background-color: #F7F6FE;
+    height: calc(100% - 110px);
+    min-height: calc(100% - 110px);
+    padding-top: 110px;
+    padding-right: 40px;
+    transition: padding-left .3s;
+}
+
+    #dataconnect-main h3 {
+        display: inline;
+    }
+
+#dataconnect-textarea {
+    height: 66%;
+    width: 98%;
+    resize: None;
+    border: none;
+    padding: 1%;
+    box-shadow: 2px 2px 2px #dddddd;
+}
+
+    #dataconnect-textarea:disabled {
+        background-color: rgba(67, 67, 66,0.1)
+    }
+
+.dataconnect-text {
+    color: #534E9B;
+    font-weight: 600;
+}
+
+.text-border {
+    border: 1px solid #534E9B;
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 1px;
+}
+
+.text-border1 {
+    border: 1px solid #534E9B;
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 0px;
+}
+
+.text-border:hover {
+    background-color: #E7E6F4;
+}
+
+.selected-text-border {
+    background-color: #534E9B;
+    color: white;
+}
+
+#sample-dataset {
+    margin-right: 15px;
+}
+
+.dataconnect-dropdown {
+    background-color: white;
+    width: 10%;
+    margin-left: 1%;
+    margin-right: 2%;
+    padding: 0.4%;
+    border: none;
+    font-family: 'Segoe UI';
+}
+
+#dataconnect-input-width {
+    width: 8%;
+    border: none;
+    padding: 0.535%;
+    margin-left: 1%;
+}
+
+    #dataconnect-input-width:disabled {
+        background-color: rgba(67, 67, 66,0.1)
+    }
+
+#excel-column:disabled {
+    background-color: rgba(67, 67, 66,0.1);
+}
+
+#dataconnect-button-wrapper {
+    display: inline;
+    float: right;
+    width: 13%;
+}
+
+#button, #button-disabled {
+    background-color: #534E9B;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 3.5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    cursor: pointer;
+    float: right;
+}
+
+#button-disabled {
+    background-color: #cccccc;
+    cursor: auto;
+}
+
+.button-notification {
+    background-color: #534E9B;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 0px;
+    cursor: pointer;
+    float: right;
+    padding: 10px 15px 10px 15px;
+    min-width: 80px;
+}
+
+.dataconnect-upload-icon {
+    width: 18px;
+    vertical-align: top;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+#dataconnect-upload {
+    display: inline;
+    margin-bottom: 10px;
+    float: right;
+    width: 310px;
+    text-align: end;
+    position: relative;
+}
+
+    #dataconnect-upload label {
+        cursor: pointer;
+    }
+
+#dataconnect-upload-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#footer-textanalytics-dataconnect {
+    width: 80%;
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+}
+
+    #footer-textanalytics-dataconnect a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #3a31aa;
+    }
+
+@media (max-width:1030px) {
+    #dataconnect-upload {
+        display: block;
+        float: unset;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    #dataconnect-main {
+        padding-right: 15px;
+        padding-top: 90px;
+        height: calc(100% - 90px);
+        min-height: calc(100% - 120px);
+    }
+
+    #dataconnect-textarea {
+        height: 35%;
+        margin-top: 10px;
+        width: 98%;
+    }
+
+    .dataconnect-dropdown {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    #dataconnect-input-width {
+        width: calc(100% - 20px);
+        display: block;
+        padding: 3px 10px 3px 10px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    #button, #button-disabled {
+        width: 100%;
+        padding: 10px;
+        display: block;
+    }
+
+    #dataconnect-button-wrapper {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .mdc-dialog__backdrop {
+        pointer-events: none;
+    }
+
+    #footer-textanalytics {
+        font-size: 13px;
+        margin-top: 110px;
+    }
+}
+
+@media (min-width: 1031px) and (max-width: 1300px) {
+
+    #dataconnect-main {
+        font-size: 14px;
+        min-height: calc(100% - 132px);
+        padding-top: 113px;
+    }
+
+    #dataconnect-textarea {
+        height: 58%;
+        width: 98%;
+    }
+
+    #footer-textanalytics-dataconnect {
+        width: 70%;
+        text-align: center;
+        position: fixed;
+        bottom: 5px;
+    }
+}
+
+@media (min-width:1301px) {
+    #dataconnect-main {
+        background-color: #F7F6FE;
+        min-height: calc(100% - 156px);
+    }
+}
+
+@media (min-width: 1301px) and (max-width: 1500px) {
+
+
+    #footer-textanalytics-dataconnect {
+        width: 74%;
+        text-align: center;
+        position: fixed;
+        bottom: 5px;
+    }
+}
+
+@media(max-height:720px) and (max-width:1285) {
+    #dataconnect-main {
+        padding-top: 113px;
+    }
+}

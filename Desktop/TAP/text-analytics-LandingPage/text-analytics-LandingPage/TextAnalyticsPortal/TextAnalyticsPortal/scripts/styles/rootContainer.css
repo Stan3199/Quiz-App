@@ -1,0 +1,24 @@
+﻿#app-main {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ReactTable .rt-thead.-header {
+    box-shadow:none !important;
+}
+.ReactTable .rt-thead .rt-tr {
+   text-align:left !important;
+}
+/*.grid-heading {
+    font-weight: 700 !important;
+    font-size: 1.1vw !important;
+}
+@media (max-width:768px) {
+    .grid-heading {
+        font-size: 14px !important;
+    }
+}
+@media (max-width:768px) {
+    .grid-heading {
+        font-size: 14px !important;
+    }
+}*/
